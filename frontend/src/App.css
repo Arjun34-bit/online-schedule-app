@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+  background-color: aquamarine;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.animate {
+  animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-div {
+  background-color: black;
+  height: fit-content;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 30px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.tab-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-bottom: 2px;
+  color: white;
+}
