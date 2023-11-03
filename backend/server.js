@@ -14,8 +14,6 @@ app.use("/admin", adminRoutes);
 app.use("/instructor", instructorRoutes);
 app.use("/lectures", lectureRoutes);
 
-// app.use("api/instructor", instructorRoutes);
-
 //--------------Deployment---------
 
 const __dirname1 = path.resolve();
