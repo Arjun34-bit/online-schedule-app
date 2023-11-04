@@ -5,6 +5,8 @@ const adminRoutes = require("./routes/adminRoutes.js");
 const instructorRoutes = require("./routes/instructorRoutes.js");
 const lectureRoutes = require("./routes/lectureRoutes.js");
 
+const path = require("path");
+
 dotenv.config(); //configuring the dotenv package.
 connectDB();
 const app = express(); //creating instance for express.

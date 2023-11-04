@@ -20,10 +20,12 @@ import {
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import axios from "axios";
 import { useLocation, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const InstructorPage = () => {
   const { id } = useParams();
   const [lectures, setLectures] = useState();
+  const navigate = useNavigate();
 
   const toast = useToast();
 
@@ -55,6 +57,10 @@ const InstructorPage = () => {
     getAssinLectures();
   });
 
+  const handleLogout = () => {
+    navigate("/instructor");
+  };
+
   return (
     <div className="main-div">
       <Box
@@ -64,8 +70,11 @@ const InstructorPage = () => {
         height={"25"}
         marginTop={"0"}
       >
-        <Text>LecOn</Text>
+        <Text bgColor="red" fontSize="30px" padding="10px">
+          LecOn
+        </Text>
         <Text>Instructor Id:{id}</Text>
+        <Text onClick={handleLogout}>LogOut</Text>
       </Box>
       <Box marginTop={"8px"}>
         {lectures ? (
